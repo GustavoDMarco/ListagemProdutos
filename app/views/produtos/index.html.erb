@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Listagem de Produtos</h1>
+<div id="produtos">
+<p>
+ <%= link_to 'Crescente', produtos_path(sort: 'crescente') %>
+ <%= link_to 'Decrescente', produtos_path(sort: 'decrecente') %>
+</p>
+<% @produtos.each do |produto| %>
+  <%= render partial: 'listagem', locals: { produto: produto } %>
+    <p>
+      <%= link_to "Mostrar produto", produto %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Cadastrar produto", new_produto_path %>

@@ -1,0 +1,41 @@
+<%= form_with(model: produto) do |form| %>
+  <% if produto.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(produto.errors.count, "error") %> Não foi possível cadastrar o produto:</h2>
+
+      <ul>
+        <% produto.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name, "Nome", style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, "Descrição", style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div>
+    <%= form.label :price, "Preço", style: "display: block" %>
+    <%= form.text_field :price %>
+  </div>
+
+  <div>
+  <%= form.label :available, "Disponível", style: "display: block" %>
+  <%= form.label :available, "Sim", style: "display: block" %>
+  <%= form.check_box :available %>
+
+ <%= form.label :another_field, "Não", style: "display: block" %>
+ <%= form.check_box :another_field %>
+</div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
