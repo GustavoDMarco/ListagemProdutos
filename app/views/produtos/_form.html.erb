@@ -1,6 +1,6 @@
 <%= form_with(model: produto) do |form| %>
   <% if produto.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger" role="alert">
       <h2><%= pluralize(produto.errors.count, "error") %> Não foi possível cadastrar o produto:</h2>
 
       <ul>
@@ -27,15 +27,15 @@
   </div>
 
   <div>
-  <%= form.label :available, "Disponível", style: "display: block" %>
-  <%= form.label :available, "Sim", style: "display: block" %>
-  <%= form.check_box :available %>
+    <%= form.label :available, "Disponível", style: "display: block" %>
+    <%= form.label :available, "Sim", style: "display: block" %>
+    <%= form.check_box :available %>
 
- <%= form.label :another_field, "Não", style: "display: block" %>
- <%= form.check_box :another_field %>
-</div>
+    <%= form.label :another_field, "Não", style: "display: block" %>
+    <%= form.check_box :another_field %>
+  </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Cadastrar", class: "btn btn-success" %>
   </div>
 <% end %>

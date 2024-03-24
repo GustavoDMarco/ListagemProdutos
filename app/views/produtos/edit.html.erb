@@ -1,10 +1,10 @@
 <h1>Editar produto</h1>
 
-<%= render "form", produto: @produto %>
+<%= render "formEdit", produto: @produto %>
 
 <br>
 
 <div>
-  <%= link_to "Mostrar produto", @produto %> |
-  <%= link_to "Voltar para listagem", produtos_path %>
+  <%= link_to "Voltar", @produto, class: "btn btn-outline-primary"%> 
+  <%= link_to "Voltar para listagem", produtos_path, class: "btn btn-outline-primary" %>
 </div>
