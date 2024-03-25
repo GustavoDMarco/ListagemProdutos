@@ -1,6 +1,6 @@
 databases:
   - name: ListaProdutos
-    databaseName: Produtos
+    databaseName: produtos
     user: Gustavo
     plan: free
 
