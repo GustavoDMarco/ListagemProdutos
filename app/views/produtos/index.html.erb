@@ -4,21 +4,20 @@
  </div>
 <% end %>
 
-<h1>Listagem de Produtos</h1>
-<div id="produtos">
-<p>
-<p>Ordenar Preço</p>
- <%= link_to 'Crescente', produtos_path(sort: 'crescente'), class: "btn btn-outline-info btn-sm" %>
- <%= link_to 'Decrescente', produtos_path(sort: 'decrecente'), class: "btn btn-outline-info btn-sm" %>
-</p>
+<div id="index">
+    <h1>Listagem de Produtos</h1>
+    <div id="Ordenar">
+      <p>Ordenar Por: Preço</p>
+      <%= link_to 'Crescente', produtos_path(sort: 'crescente'), class: "btn btn-secondary btn-sm" %>
+      <%= link_to 'Decrescente', produtos_path(sort: 'decrecente'), class: "btn btn-secondary btn-sm" %>
+    </div>
 
-<div class="container text-center">
- <!-- Header row -->
- <div class="row align-items-start">
-    <div class="col"><strong>Nome</strong></div>
-    <div class="col"><strong>Preço</strong></div>
-    <div class="col"><strong>Detalhes</strong></div>
- </div>
+  <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col"><strong>Nome</strong></div>
+      <div class="col"><strong>Preço</strong></div>
+      <div class="col"><strong>Detalhes</strong></div>
+  </div>
 
  <% @produtos.each do |produto| %>
     <div class="row align-items-start">
@@ -26,16 +25,17 @@
         <%= produto.name %>
       </div>
       <div class="col">
-        <%= produto.price %>
+        <p id="Cifrao">R$</p><%=produto.price %>
       </div>
       <div class="col">
-        <%= link_to "Mostrar produto", produto, class: "btn btn-outline-secondary btn-sm" %>
+        <%= link_to "Mostrar produto", produto, class: "btn btn-outline-dark btn-sm" %>
       </div>
     </div>
  <% end %>
 </div>
 
+  <div class="botoes">
+    <%= link_to "Voltar", home_index_path,  class: "btn btn-outline-primary" %>
+    <%= link_to "Cadastrar produto", new_produto_path, class: "btn btn-success" %>
+  </div>
 </div>
-
-<%= link_to "Voltar", home_index_path,  class: "btn btn-outline-primary" %>
-<%= link_to "Cadastrar produto", new_produto_path, class: "btn btn-success" %>

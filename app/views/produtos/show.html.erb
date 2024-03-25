@@ -3,12 +3,20 @@
     <%= notice %>
  </div>
 <% end %>
+<div id="index">
+<h1>Detalhes do Produto</h1>
 
 <%= render @produto %>
 
-<div>
+  <div class="botoes">
   <%= link_to "Editar produto", edit_produto_path(@produto), class: "btn btn-warning" %> 
   <%= link_to "Voltar para listagem", produtos_path, class: "btn btn-outline-primary" %>
-
+  </div>
+  
+  <div id="BotaoExcluir">
   <%= button_to "Excluir produto", @produto, method: :delete, class: "btn btn-danger"%>
+  </div>
+
 </div>
+
+

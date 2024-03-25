@@ -26,7 +26,7 @@
     <%= form.text_field :price %>
   </div>
 
-  <div>
+  <div id="caixa">
     <%= form.label :available, "Disponível", style: "display: block" %>
     <%= form.label :available, "Sim", style: "display: block" %>
     <%= form.check_box :available %>
@@ -35,7 +35,8 @@
     <%= form.check_box :another_field %>
   </div>
 
-  <div>
+  <div class= botoes>
+    <%= link_to "Listagem", produtos_path,  class: "btn btn-outline-primary" %>
     <%= form.submit "Cadastrar", class: "btn btn-success" %>
   </div>
 <% end %>

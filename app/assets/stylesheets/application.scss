@@ -14,4 +14,69 @@
 
 @import 'bootstrap';
 
+body{
+    text-align: center;
+    margin: 0px 400px 0px 400px;
+    background-color:azure;
+}
+
+h1{
+    text-decoration: underline;
+}
+
+div#home{
+    margin-top: 150px;
+    border: 2px solid black;
+    padding: 30px;
+    box-shadow: 5px 5px 5px rgb(82, 151, 151);
+    background-color: rgb(190, 217, 255);
+    
+}
+
+div#index{
+    border: 2px solid black;
+    padding: 15px;
+    box-shadow: 5px 5px 5px rgb(82, 151, 151);
+    background-color: rgb(190, 217, 255);
+}
+
+div#indexForms{
+    border: 2px solid black;
+    padding: 8px;
+    box-shadow: 5px 5px 5px rgb(82, 151, 151);
+    background-color: rgb(190, 217, 255);
+    font-weight: bold;
+}
+
+.botoes{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div#BotaoExcluir{
+    margin-top: 10px;
+}
+
+.col{
+    margin-bottom: 10px;
+}
+
+p#Cifrao{
+    font-weight: bolder;
+    display: inline;
+}
+
+div#Ordenar>p{
+    display: inline;
+    padding: 5px;
+    font-weight:bold;
+}
+
+div#Ordenar{
+    margin:15px 0px 10px 0px;
+}
+
+h1{
+    color: rgb(20, 20, 199);
+}
 
