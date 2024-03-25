@@ -1,7 +1,5 @@
 source "https://rubygems.org"
 
-//require assets:precompile
-
 ruby "3.0.6"
 
 gem 'bootstrap', '~> 5.0.0' 
